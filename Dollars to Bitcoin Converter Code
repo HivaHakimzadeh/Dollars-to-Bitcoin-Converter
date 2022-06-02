@@ -1,0 +1,31 @@
+/******************************************************************************
+This program is designed to convert amount of dollars that is input by the user
+to Dogecoin and Bitcoin.
+Hiva Hakimzadeh
+2/5/2022
+*******************************************************************************/
+#include <iostream>
+#include <iomanip>
+
+using namespace std;
+
+int main()
+{
+    const double BTC_PER_DOLLAR=2.7e-05;
+    const double DOGE_PER_DOLLAR=7.29;
+    int dollars;
+    double dollarsToBitCoin, dollarsToDogeCoin;
+    cout<<"Please enter a dollar amount to convert into Bitcoin and Dogecoin:"<<endl;
+    cin>>dollars;
+    cout<<endl;
+    dollarsToBitCoin= BTC_PER_DOLLAR*dollars;
+    dollarsToDogeCoin= DOGE_PER_DOLLAR*dollars;
+    cout<<"Using the conversion rates of "<<BTC_PER_DOLLAR<<" Bitcoin per dollar and "<<DOGE_PER_DOLLAR<<" Dogecoin per dollar:"<<endl;
+    cout<<endl;
+    cout<<dollars<<" dollars = "<<fixed<<setprecision(3)<<dollarsToBitCoin<<" Bitcoin."<<endl;
+    cout<<dollars<<" dollars = "<<fixed<<setprecision(3)<<dollarsToDogeCoin<<" Dogecoin."<<endl;
+    
+
+    return 0;
+    
+}
